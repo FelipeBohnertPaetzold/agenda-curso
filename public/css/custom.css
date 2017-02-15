@@ -1,0 +1,37 @@
+a:link:hover {
+    text-decoration: none;
+}
+
+.letras {
+    margin-right: 30px;
+}
+
+.separa-top {
+    margin-top: 10px;
+}
+
+.acoes {
+    float: right;
+}
+
+.excluir {
+    color: red;
+    margin-left: 5px;
+}
+
+.criterio {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.telefone {
+    border-bottom: 1px solid #ccc;
+}
+
+.editar {
+    margin-left: 5px;
+}
+
+.add-fone {
+    color: green;
+}
