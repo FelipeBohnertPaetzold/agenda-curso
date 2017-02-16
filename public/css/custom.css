@@ -35,3 +35,7 @@ a:link:hover {
 .add-fone {
     color: green;
 }
+
+.float-left {
+    float: left;
+}

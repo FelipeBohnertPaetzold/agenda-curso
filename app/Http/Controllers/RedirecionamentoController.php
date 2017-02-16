@@ -28,4 +28,11 @@ class RedirecionamentoController extends Controller
             'pessoa' => $this->pessoa->find($id)
         ]);
     }
+
+    public function editarPessoa($id)
+    {
+        return view('pessoas.edit', [
+            'pessoa' => $this->pessoa->find($id)
+        ]);
+    }
 }

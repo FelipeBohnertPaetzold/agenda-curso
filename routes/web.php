@@ -20,6 +20,8 @@ Route::group(['name' => 'redirecionamento_de_views'], function () {
 Route::group(['prefix' => 'pessoas'], function () {
     Route::get('nova', 'RedirecionamentoController@criarNovaPessoa');
     Route::get('delete/{id}', 'RedirecionamentoController@deletaPessoa');
+    Route::get('editar/{id}', 'RedirecionamentoController@editarPessoa');
     Route::get('remove/{id}', 'PessoaController@remove');
     Route::post('criar', 'PessoaController@criar');
+    Route::post('update', 'PessoaController@update');
 });

@@ -38,8 +38,8 @@
                             <h3 class="panel-title">
                                 {{$pessoa->nome}}
                                 <div class="acoes">
-                                    <a title="Novo telefone" href="telefone/novo"><i class="glyphicon glyphicon-plus add-fone"></i> </a>
-                                    <a title="Editar contato" href="#">
+                                    <a title="Novo telefone" href="/telefone/novo"><i class="glyphicon glyphicon-plus add-fone"></i> </a>
+                                    <a title="Editar contato" href="/pessoas/editar/{{$pessoa->id}}">
                                         <i class="glyphicon glyphicon-pencil editar"></i>
                                     </a>
                                     <a title="Remover contato" href="/pessoas/delete/{{$pessoa->id}}">

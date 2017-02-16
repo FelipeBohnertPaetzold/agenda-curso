@@ -44,6 +44,13 @@ class PessoaController extends Controller
         return redirect('/');
     }
 
+    public function update(Request $request)
+    {
+        $pessoa = $this->pessoa->find($request->id);
+        $pessoa->update($request->all());
+        return redirect('/');
+    }
+
     public function remove($id)
     {
         $this->pessoa->find($id)->delete();
