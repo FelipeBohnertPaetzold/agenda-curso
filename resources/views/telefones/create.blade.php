@@ -30,13 +30,23 @@
             <form action="/telefones/criar" method="POST">
                 {{csrf_field()}}
                 <input type="hidden" value="{{$pessoa->id}}" name="pessoa_id">
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-3 {{$errors->has('ddd') ? 'has-error': ''}}">
                     <label class="control-label" for="ddd">DDD</label>
-                    <input type="text" id="ddd" name="ddd" class="form-control" placeholder="(xx)">
+                    <input type="text" id="ddd" name="ddd" value="{{old("ddd")}}" class="form-control" placeholder="(xx)">
+                    @if ($errors->has('ddd'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('ddd') }}</strong>
+                        </span>
+                    @endif
                 </div>
-                <div class="form-group col-md-9">
+                <div class="form-group col-md-9 {{$errors->has('fone') ? 'has-error': ''}}">
                     <label class="control-label" for="fone">Fone</label>
-                    <input type="text" id="fone" name="fone" class="form-control" placeholder="Telefone">
+                    <input type="text" id="fone" name="fone" class="form-control" value="{{old("fone")}}" placeholder="Telefone">
+                    @if ($errors->has('fone'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('fone') }}</strong>
+                        </span>
+                    @endif
                 </div>
                 <div class=" col-md-12">
                     <button type="submit" class="btn btn-primary acoes editar"><i class="glyphicon glyphicon-floppy-disk">
