@@ -59,7 +59,7 @@ class TelefoneController extends Controller
     {
         $regras = [
             'ddd' => 'required|min:2|max:2',
-            'fone' => 'required|min:8|max:9',
+            'fone' => 'required|min:9|max:10',
             'pessoa_id' => 'required'
         ];
 
@@ -68,8 +68,8 @@ class TelefoneController extends Controller
             'ddd.min' => 'Campo ddd deve ter 2 dígitos',
             'ddd.max' => 'Campo ddd deve ter 2 dígitos',
             'fone.required' => 'Campo telefone é obrigatório',
-            'fone.min' => 'Campo telefone deve ter ao menos 8 dígitos',
-            'fone.max' => 'Campo telefone deve ter no máximo 9 dígitos',
+            'fone.min' => 'Campo telefone deve ter ao menos 9 dígitos',
+            'fone.max' => 'Campo telefone deve ter no máximo 10 dígitos',
             'pessoa_id' => 'É obrigatório informar pessoa'
         ];
 

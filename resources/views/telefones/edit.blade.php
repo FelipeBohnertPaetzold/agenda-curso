@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group col-md-9 {{$errors->has('fone') ? 'has-error': ''}}">
                     <label class="control-label" for="fone">Fone</label>
-                    <input type="text" id="fone" value="{{$telefone->fone}}" name="fone" class="form-control" placeholder="Telefone">
+                    <input type="text" id="fone" value="{{$telefone->fone}}" name="fone" class="form-control msk-celular" placeholder="Telefone">
                     @if ($errors->has('fone'))
                         <span class="help-block">
                             {{ $errors->first('fone') }}
