@@ -25,3 +25,12 @@ Route::group(['prefix' => 'pessoas'], function () {
     Route::post('criar', 'PessoaController@criar');
     Route::post('update', 'PessoaController@update');
 });
+
+Route::group(['prefix' => 'telefones'], function () {
+    Route::get('novo/{pessoa_id}', 'RedirecionamentoController@novoTelefone');
+    Route::get('delete/{id}', 'RedirecionamentoController@deletaTelefone');
+    Route::get('remove/{id}', 'TelefoneController@remove');
+    Route::get('editar/{id}', 'RedirecionamentoController@editarTelefone');
+    Route::post('criar', 'TelefoneController@novoTelefone');
+    Route::post('update', 'TelefoneController@update');
+});

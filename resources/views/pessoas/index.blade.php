@@ -38,7 +38,7 @@
                             <h3 class="panel-title">
                                 {{$pessoa->nome}}
                                 <div class="acoes">
-                                    <a title="Novo telefone" href="/telefone/novo"><i class="glyphicon glyphicon-plus add-fone"></i> </a>
+                                    <a title="Novo telefone" href="/telefones/novo/{{$pessoa->id}}"><i class="glyphicon glyphicon-plus add-fone"></i> </a>
                                     <a title="Editar contato" href="/pessoas/editar/{{$pessoa->id}}">
                                         <i class="glyphicon glyphicon-pencil editar"></i>
                                     </a>
@@ -55,10 +55,10 @@
                                     <i class="glyphicon glyphicon-phone"></i>
                                     ({{$telefone->ddd}}) {{$telefone->fone}}
                                     <div class="acoes">
-                                        <a href="#">
+                                        <a href="/telefones/editar/{{$telefone->id}}">
                                             <i class="glyphicon glyphicon-pencil"></i>
                                         </a>
-                                        <a href="#">
+                                        <a href="/telefones/delete/{{$telefone->id}}">
                                             <i class="glyphicon glyphicon-trash excluir"></i>
                                         </a>
                                     </div>
