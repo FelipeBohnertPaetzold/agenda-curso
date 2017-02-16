@@ -30,13 +30,19 @@
             <form action="/pessoas/update" method="POST">
                 {{csrf_field()}}
                 <input type="hidden" name="id" value="{{$pessoa->id}}">
-                <div class="form-group col-md-12">
+                <div class="form-group col-md-12 {{$errors->has('nome') ? 'has-error' : ''}}">
                     <label class="control-label" for="nome">Nome</label>
-                    <input required type="text" value="{{$pessoa->nome}}" id="nome" name="nome"
+                    <input type="text" value="{{$pessoa->nome}}" id="nome" name="nome"
                            placeholder="Nome do contato" class="form-control">
+                    @if ($errors->has('nome'))
+                        <span class="help-block">
+                            {{ $errors->first('nome') }}
+                        </span>
+                    @endif
                 </div>
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary acoes editar"><i class="glyphicon glyphicon-floppy-disk">
+                    <button type="submit" class="btn btn-primary acoes editar"><i
+                                class="glyphicon glyphicon-floppy-disk">
                         </i> Salvar
                     </button>
                     <a href="/" class="btn btn-default acoes"><i class="glyphicon glyphicon-remove"></i> Cancelar</a>

@@ -35,7 +35,7 @@
                     <input type="text" id="ddd" name="ddd" value="{{old("ddd")}}" class="form-control" placeholder="(xx)">
                     @if ($errors->has('ddd'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('ddd') }}</strong>
+                            {{ $errors->first('ddd') }}
                         </span>
                     @endif
                 </div>
@@ -44,7 +44,7 @@
                     <input type="text" id="fone" name="fone" class="form-control" value="{{old("fone")}}" placeholder="Telefone">
                     @if ($errors->has('fone'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('fone') }}</strong>
+                            {{ $errors->first('fone') }}
                         </span>
                     @endif
                 </div>

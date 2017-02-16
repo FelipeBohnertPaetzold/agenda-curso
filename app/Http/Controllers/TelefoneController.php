@@ -41,15 +41,21 @@ class TelefoneController extends Controller
     public
     function update(Request $request)
     {
-        $telefone = $this->telefone->find($request->id);
+        $validacao = $this->validacao($request->all());
+        if ($validacao->fails()) {
+            return redirect()->back()
+                ->withErrors($validacao->errors())
+                ->withInput($request->all());
+        } else {
+            $telefone = $this->telefone->find($request->id);
 
-        $telefone->update($request->all());
+            $telefone->update($request->all());
 
-        return redirect('/');
+            return redirect('/');
+        }
     }
 
-    private
-    function validacao($data)
+    public function validacao($data)
     {
         $regras = [
             'ddd' => 'required|min:2|max:2',
